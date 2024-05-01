@@ -1,0 +1,102 @@
+
+.cards{
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px  ;
+    grid-column-gap: 110px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+     background: #e3e3e3;
+}
+.user-cards{
+    text-decoration: none;
+    color: black ;
+    width: 300px;
+   
+}
+.user-cards button{
+    display: flex ;
+    align-items: center;
+    justify-content: center ;
+    margin-left: 70px;
+}
+
+.cards h5,p,img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+}
+/* .cards img{
+    margin-left:45px;
+} */
+.user-h1{
+    height: 25px;
+}
+
+.view-cad{
+    height: 500px;
+    background: #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+.view-cad .card{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .img-size{
+    width:100px;
+    height:100px;
+} */
+.single-user .card{
+    height:200px;
+}
+
+.list-card{
+    height: 200px;
+}
+.edit_delet{
+    width: 200px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.imgUpload{
+    width: 100px;
+    height: 100px;
+}
+.Toastify__toast--error {
+  background-color: #f44336;
+}
+.Toastify__toast--success {
+  background-color: #4caf50;
+}
+
+.close_button{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.modal_alert{
+     padding:80px;
+     width: 50%;
+     margin: auto;
+     margin-top:80px;
+}
+.modal_alert .alert_card{
+    background-color: #c9c9c9;
+    padding: 2rem; 
+    gap:1.5rem; 
+    align-items: center;
+}
+.modal_alert span{
+    font-size: 20px;
+
+}

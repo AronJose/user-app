@@ -1,0 +1,26 @@
+nav{
+    background-color:black;
+    color: aliceblue;
+    font-weight: bold;
+    display: flex;
+    justify-content:space-between;
+    top: 0%;
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+nav h2{
+    margin-left:170px;
+}
+.text{
+    display: flex;
+    align-items: center;
+
+}
+.text span{
+    margin-right: 30px;
+}
+.header-links{
+    text-decoration: none;
+    color: white
+}

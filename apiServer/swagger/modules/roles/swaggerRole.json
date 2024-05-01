@@ -1,0 +1,67 @@
+{
+    "/api/roles": {
+        "get": {
+            "tags": [
+                "Roles"
+            ],
+            "description": "List of  All Roles ",
+            "summary": "List of  All Roles",
+            "parameters": [],
+            "responses": {
+                "200": {
+                    "description": "Role List",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully listed "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            }
+        },
+        "post": {
+            "tags": [
+                "Roles"
+            ],
+            "description": "Adding Roles ",
+            "summary": "Adding Roles",
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "role_name": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Adding Roles",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully Add Roles "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,357 @@
+{
+    "/api/users": {
+        "post": {
+            "tags": [
+                "Auth"
+            ],
+            "description": "Add Users OR Sign Up ",
+            "summary": "Add Users OR Sign Up ",
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "first_name": {
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "phone_number": {
+                                "type": "string"
+                            },
+                            "password": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Add Users OR Sign Up ",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully Sign Up "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            }
+        }
+    },
+    "/api/users/login": {
+        "post": {
+            "tags": [
+                "Auth"
+            ],
+            "description": "User Login ",
+            "summary": "User Login ",
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "email": {
+                                "type": "string"
+                            },
+                            "password": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "User Login ",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully Login "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "User Not Found"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            }
+        }
+    },
+    "/api/users/": {
+        "get": {
+            "tags": [
+                "Users"
+            ],
+            "description": "List of  All Users ",
+            "summary": "List of  All Users",
+            "parameters": [
+                {
+                    "name": "page",
+                    "in": "query",
+                    "type": "string",
+                    "description": "Page number"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "User List",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully listed "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [
+                {
+                    "Authorization": []
+                }
+            ]
+        }
+    },
+    "/api/users/{id}": {
+        "get": {
+            "tags": [
+                "Users"
+            ],
+            "description": " User ",
+            "summary": " User",
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "type": "string",
+                    "description": "User Id"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "User ",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [
+                {
+                    "Authorization": []
+                }
+            ]
+        },
+        "put": {
+            "tags": [
+                "Users"
+            ],
+            "description": " User Update",
+            "summary": " User Update",
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "type": "string",
+                    "description": "User Id"
+                },
+                {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "first_name": {
+                                "type": "string"
+                            },
+                            "last_name": {
+                                "type": "string"
+                            },
+                            "email": {
+                                "type": "string"
+                            },
+                            "phone_number": {
+                                "type": "string"
+                            },
+                            "password": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "User Update",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully Updated "
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [
+                {
+                    "Authorization": []
+                }
+            ]
+        },
+        "delete": {
+            "tags": [
+                "Users"
+            ],
+            "description": " Delete User",
+            "summary": " Delete User",
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "type": "string",
+                    "description": "User Id"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "User Update",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully Deleted"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [
+                {
+                    "Authorization": []
+                }
+            ]
+        }
+    },
+    "/api/users/img": {
+        "post": {
+            "tags": [
+                "Users"
+            ],
+            "description": "Image Upload",
+            "summary": "Image Upload",
+            "parameters": [
+                {
+                    "in": "formData",
+                    "name": "file",
+                    "type": "file",
+                    "description": "The Image to upload."
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Image Upload",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully Upload Image"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [
+                {
+                    "Authorization": []
+                }
+            ]
+        }
+    },
+    "/api/users/{id}/verify/{token}": {
+        "get": {
+            "tags": [
+                "Users"
+            ],
+            "description": "Email Verify to move React",
+            "summary": "Email Verify to move React",
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "type": "string",
+                    "description": "Email Verify to move React"
+                },
+                {
+                    "name": "token",
+                    "in": "path",
+                    "type": "string",
+                    "description": "Email Verify to move React"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Email Verify to move React",
+                    "schema": {
+                        "type": "object",
+                        "example": {
+                            "message": "successfully verify"
+                        }
+                    }
+                },
+                "400": {
+                    "description": "Bad request"
+                },
+                "500": {
+                    "description": "Internal Server Error"
+                }
+            },
+            "security": [
+                {
+                    "Authorization": []
+                }
+            ]
+        }
+    }
+}

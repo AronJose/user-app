@@ -1,0 +1,26 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "User Management System",
+        "description": " Application API",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+     "securityDefinitions": {
+        "Authorization": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "headers",
+            "description": "Authentication token"
+        }
+    }
+   
+}

@@ -1,0 +1,73 @@
+h1{
+    display: flex;
+    justify-content: center;
+    color: #1E0E62;
+    line-height: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+.ptext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 5px;
+    color: rgba(21, 20, 57, 0.4);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height:0;
+}
+.cad{
+    margin:10px;
+    margin-top: 0px;
+    border: 2px solid #EBEAED;
+    box-sizing: border-box; 
+    height: 325px;
+    width: 280px;
+    
+}
+.cad button{
+    background-color: #FFFFFF;
+    background: #5D5FEF;
+    border-radius: 4px;
+    position:absolute;
+    margin-left:70px;
+    width: 100px;
+    height: 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: #FFFFFF;
+} 
+.boxhead{
+    color: #1E0E62;
+    font-family: 'Roboto';
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.boxtext{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    color: rgba(21, 20, 57, 0.4);
+    line-height: 0px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 15px;
+}
+.con_box{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+}
+.cad img{
+    width: 275px;
+    height: 180px;
+}
+

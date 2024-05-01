@@ -1,0 +1,87 @@
+.create-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-user  .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  width: 600px;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 15px;
+  background: #e3e3e3;
+  border-radius: 8px;
+  height: 550px;
+}
+.inputBox .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 58px;
+  margin-left: 200px !important;
+  text-transform: none;
+}
+.inputBox span {
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  transform: translateY(-4px);
+  margin-left: 4px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 13px;
+  color: #000;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 3px;
+  border-radius: 8px;
+}
+.inputBox input{
+  margin-left : 70px
+}
+.inputBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.enter {
+  height: 45px;
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}
+
+.social-login{
+display: flex;
+gap:10px
+}
+.btnFacebook { 
+  width:60px;
+  height:50px;  
+  background-color: #3b5998;
+  color:white;
+  border:0px transparent;  
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2px;
+}
+.btnInstagram { 
+  width: 40px;
+  border:0px transparent;  
+  text-align: center;
+  font-weight: bold;
+}
+.btnGoogle{
+  height: 49px;
+}
