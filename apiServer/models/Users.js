@@ -21,15 +21,41 @@ const users = sequelize.define('users', {
     email: {
         type: Sequelize.STRING,
         allowNull: true,
-       
     },
     phone_number: {
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    descriptions: {
+        type: Sequelize.STRING,
+      allowNull : true  
+    },
+    address: {
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    city: {
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    state: {
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    country: {
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    zip_code: {
         type: Sequelize.STRING,
         allowNull: true,
     },
     password: {
         type: Sequelize.STRING,
         allowNull: true,
+    },
+    gender: {
+        type: Sequelize.STRING,
     },
     password_salt: {
         type: Sequelize.STRING,
@@ -64,7 +90,7 @@ const users = sequelize.define('users', {
     },
 }, { freezeTableName: true });
 users.sync().then(() => {
-    console.log('Table created successfully');
+    console.log('User Table created successfully');
 }).catch((error) => {
     console.error('Error creating table:', error);
 });

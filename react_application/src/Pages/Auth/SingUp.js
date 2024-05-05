@@ -55,7 +55,7 @@ function SingUp() {
                 {(formik) => (
                     <Form >
                         <div className=" space-y-2 h-screen bg-white flex flex-col items-center justify-center">
-                            <div className=" space-y-[40px] w-[40%] h-[95%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center ">
+                            <div className=" space-y-[40px] w-[40%] py-4 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center ">
                                 <div className="space-y-4 flex items-center flex-col">
                                     <div className="space-y-2 flex items-center flex-col">
                                         <h2 className="text-3xl pt-4 font-mono font-black">Create an Account</h2>

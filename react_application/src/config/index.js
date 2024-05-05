@@ -7,7 +7,8 @@ const env = {
         fb_app_id: "866107041888313",
         instagram_client_id: "334705815815196",
         redirect_URI: "https://localhost:3000/",
-        client_secret: "61e4fc32c9b8307dbffd4ca814cdda0a"
+        client_secret: "61e4fc32c9b8307dbffd4ca814cdda0a",
+        api_Domain: "http://localhost:8080"
     },
 };
 
@@ -18,7 +19,10 @@ const all = {
         fileUpload: "users/img",
         google: "users/googleLogin",
         fb: "users/facebookLogin",
-        instagram: "users/instagramLogin"
+        instagram: "users/instagramLogin",
+        profile: "profile",
+        production:"production"
+
     }
 }
 console.log("process.env.NODE_ENV", process.env.REACT_APP_ENV)

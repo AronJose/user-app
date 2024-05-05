@@ -39,13 +39,13 @@ const UserList = () => {
     return (
         <div>
             <h1 className="user-h1 mt-2 font-extrabold text-3xl pt-2 ">Users List</h1>
-            <div className="cards mt-5  bg-white h-[470px] py-2 space-y-4 ">
+            <div className="cards mt-5 h-fit bg-white  py-4 space-y-4 ">
                 {userList&&userList.map((user) => (
                     <div className='user-cards bg-white' key={user.id} onClick={() => setUserIdDelete(user.id)}>
                         <SingleUser alertModal={alertModal} setAlertModal={setAlertModal} userIdDelete={userIdDelete} removeUser={removeUser} deleteUser={deleteUser} user={user} setUserList={setUserList} currentPage={currentPage} updateOptions={false}  /> </div>
                 ))}
             </div>
-            <div >
+            <div className="my-2">
                 <PaginatedItems setCurrentPage={setCurrentPage} currentPage={currentPage} setTotalPage={setTotalPage} totalPage={totalPage} />
             </div>
         </div>

@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
 import { useLocation } from "react-router-dom"
 import config from "../../config/index"
-
+import { gapi } from 'gapi-script';
 
 function SocilLogin() {
 
@@ -35,6 +35,15 @@ function SocilLogin() {
     // ------------------------------------------------ Google Login -------------------------------------
     const responseGoogle = async (res) => {
         const GoogleLogin = await dispatch.Auth.loginGoogle(res);
+        console.log(GoogleLogin, "google")
+        
+        // function start() {
+        //     gapi.client.init({
+        //         clientId: config.google_client_id,
+        //     })
+        // }
+        // gapi.load('client:auth2', start)
+    
         handleSocialLogin(() => GoogleLogin, '/home');
     };
 

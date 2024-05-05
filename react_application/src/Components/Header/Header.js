@@ -28,7 +28,7 @@ export default function Header() {
                 <Link className='font-semibold text-gray-700 font-inter' to="/user"><span>Users</span></Link>
                 <Link className='text-gray-700 font-semibold font-inter' to="/adduser"><span>Add-User</span></Link>
                 <Link className='text-gray-700 font-semibold font-inter' to="/profile"><span>Profile</span></Link>
-                <Link className='text-gray-700 font-semibold font-inter' to="/aboutus"> <span>Contact us</span></Link>
+                <Link className='text-gray-700 font-semibold font-inter' to="/msg"> <span><i class='far fa-comments'></i></span></Link>
 
                
                 <span onClick={logout} className="cursor-pointer text-gray-700 font-semibold font-inter">Logout</span>

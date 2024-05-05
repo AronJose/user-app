@@ -1,6 +1,5 @@
 const multer = require('multer');
 const path = require('path');
-console.log("inside routerrrrrrrrrrrrrrrrr")
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'uploads/'); // Save files in the 'uploads' folder

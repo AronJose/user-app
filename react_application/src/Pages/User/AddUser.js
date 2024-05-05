@@ -72,7 +72,7 @@ const AddUser = ({ edited, user, setUserList, setIsModalOpen, currentPage}) => {
 
             {(formik) => (
                 <Form >
-                    <div className="create-user py-2">
+                    <div className="create-user py-4">
                         <div className="card ">
                             <h2 className="signup text-3xl font-semibold py-2">{!edited ? "ADD USER" : "EDIT USER"}</h2>
                             <div className="inputBox">

@@ -16,7 +16,7 @@ const roles = sequelize.define('roles', {
 
 }, { freezeTableName: true });
 roles.sync().then(() => {
-    console.log('Table created successfully');
+    console.log('Role Table created successfully');
 }).catch((error) => {
     console.error('Error creating table:', error);
 });

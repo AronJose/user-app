@@ -60,7 +60,7 @@ const addUser = async (req, res) => {
 // --------------------------------------------- List ------------------------------------------------------
 
 const getUsers = async (req, res) => {
-    try {
+    // try {
         const currentPage = req.query.page || 1;
         const itemsPerPage = 6;
         const offset = (currentPage - 1) * itemsPerPage;
@@ -76,9 +76,9 @@ const getUsers = async (req, res) => {
         }
         );
         res.json(userslist);
-    } catch (error) {
-        res.status(500).json({ error: "con't Retrieving values" });
-    }
+    // } catch (error) {
+    //     res.status(500).json({ error: "con't Retrieving values" });
+    // }
 }
 
 // --------------------------------------------- List By Id ------------------------------------------------

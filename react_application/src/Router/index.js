@@ -9,7 +9,8 @@ import SingUp from '../Pages/Auth/SingUp';
 import Login from '../Pages/Auth/Login';
 import PublicRoute from './PublicRoute';
 import PrivateRoute from './PrivateRote';
-import Profile from '../Pages/User/Profile';
+import Profile from '../Pages/Profile/Myprofile';
+import EditProfile from '../Pages/Profile/EditProfile';
 
 
 function Router() {
@@ -40,7 +41,10 @@ function Router() {
             <Route path="/user/:id" element={<PrivateRoute header={true} component={UserDetails} />}/>
             <Route path="/adduser" element={<PrivateRoute header={true} component={AddUser} />}/>
             <Route path="/home" element={<PrivateRoute header={true} component={Home} />}/>
-            <Route path="/profile" element={<PrivateRoute header={true} component={Profile} />}/>
+            <Route path="/Profile" element={<PrivateRoute header={true} component={Profile} />} />
+            <Route path="/updateMyprofile" element={<PrivateRoute header={true} component={EditProfile} />} />
+            
+
         </Routes>
     )
 }

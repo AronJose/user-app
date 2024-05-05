@@ -6,7 +6,7 @@ import Images2 from '../../Assets/img3.png';
 
 export default function Content() {
     return (
-        <div>
+        <div className="py-4">
             <h1 className="mt-4 my-2 font-extrabold text-2xl">The Third Sneak-Peek of Startup</h1>
             <h1 className="font-extrabold p-2 text-2xl">Framework</h1>
             <div className="ptext ">

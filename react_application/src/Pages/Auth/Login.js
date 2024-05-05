@@ -40,7 +40,7 @@ function Login() {
                 {(formik) => (
                     <Form >
                         <div className=" space-y-2 h-screen bg-white flex flex-col items-center justify-center">
-                            <div className=" gap-y-8 w-[35%] h-[70%] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-center">
+                            <div className=" gap-y-8 w-[35%] p-10 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center justify-center">
                                 <div>
                                     <SocialLogin />
                                 </div>

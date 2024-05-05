@@ -1,19 +1,32 @@
-import React from 'react';
-import profile from '../../Assets/profil.png';
+import React, { useEffect, useState } from 'react';
 import phone from "../../Assets/phone.png"
 import pluse from "../../Assets/plus.png"
 import M from "../../Assets/Rectangle.png"
 import pg from "../../Assets//P&G.png"
-import face from '../../Assets/face1.png'
-import face2 from '../../Assets/face2.png'
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom'
+
 
 function Profile() {
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
+    const [profileInfo, setProfileInfo] = useState("")
+
+    const myProfileInfo = async (value) => {
+        const res = await dispatch.MyProfile.profile(value)
+        setProfileInfo(res)
+    }
+    useEffect(() => {
+        myProfileInfo();
+    }, []);
+
+
     return (
         <div>
             <div className="mx-48 my-4 text-gray-500 text-sm flex space-x-2 font-inter">
                 <p className="text-green-500 font-semibold ">Home</p>
                 <p>></p>
-                <p>Aron Jose</p>
+                <p>{profileInfo.first_name}{profileInfo.last_name}</p>
             </div>
             <div className="flex justify-center items-center">
                 <div className="bg-white w-9/12 shadow-xl h-[2024px]">
@@ -21,10 +34,10 @@ function Profile() {
                         <div className="h-[250px] ">
 
                             <div className="flex items-center">
-                                <img className="w-12 h-12" src={profile} />
+                                <img className="w-12 h-12" src={`http://localhost:8080/${profileInfo.image_url}`} />
 
                                 <div className="px-4 text-gray-700">
-                                    <p className="text-lg font-medium font-semibold font-inter flex justify-start">Aron Jose</p>
+                                    <p className="text-lg font-medium font-semibold font-inter flex justify-start">{profileInfo.first_name}{profileInfo.last_name}</p>
                                     <p className="text-xs text-gray-500 font-inter">Actor, Westminster, London</p>
                                 </div>
 
@@ -36,8 +49,7 @@ function Profile() {
                             </div>
 
                             <div className="my-2 text-sm font-medium text-gray-700 tracking-wide font-inter flex justify-start">
-                                <p>Hello, my name is Vogel and I’m 28 years old. I’m an actor,<br></br> singer and dancer and I love
-                                    musical theatre! I also love to <br></br> take photos and read.</p>
+                                <p>{profileInfo.descriptions}</p>
                             </div>
 
                             <div>
@@ -77,22 +89,21 @@ function Profile() {
                         </div>
                         <div className="h-[200px]">
                             <div className="flex justify-end ">
-                                <p className="font-inter font-bold text-green-500  border-2 border-green-500 w-32 flex items-center justify-center rounded">
-                                    EDIT PROFILE</p>
+                                <button className="font-inter font-bold text-green-500  border-2 border-green-500 w-32 flex items-center justify-center rounded" onClick={() => navigate('/updateMyprofile', { state: { profileInfo } })}>
+                                    EDIT PROFILE</button>
                             </div>
                             <div className="grid grid-cols-5 py-8">
                                 <div>
                                     <p className="text-gray-400 font-inter">Gender</p>
-                                    <p className="text-gray-600 text-sm font-semibold font-inter">Male</p>
+                                    <p className="text-gray-600 text-sm font-semibold font-inter">{profileInfo.gender}</p>
                                 </div>
                                 <div className="col-span-2">
                                     <p className="text-gray-400 font-inter">Phone Number</p>
-                                    <p className="text-gray-600 text-sm font-semibold font-inter">+91 9074484624</p>
+                                    <p className="text-gray-600 text-sm font-semibold font-inter ">{profileInfo.phone_number}</p>
                                 </div>
                                 <div className="col-span-2">
                                     <p className="text-gray-400 flex justify-start font-inter ">Address</p>
-                                    <p className="text-gray-600 text-sm font-semibold font-inter">2972 Westheimer Rd. Santa <br></br>
-                                        Ana, Illinois 85486</p>
+                                    <p className="text-gray-600 text-sm font-semibold font-inter flex justify-start">{profileInfo.address}</p>
                                 </div>
                             </div>
                         </div>
@@ -103,10 +114,10 @@ function Profile() {
                     <div className="h-[500px] border border-gary-500 ">
                         <div className="grid grid-cols-2 ">
                             <div>
-                                <img className="w-[540px] h-[450px]" src={face} />
+                                <img className="w-[540px] h-[450px]" src={`http://localhost:8080/${profileInfo.image_url}`} />
                             </div>
                             <div>
-                                <img className="w-[540px] h-[450px]" src={face2} />
+                                <img className="w-[540px] h-[450px]" src={`http://localhost:8080/${profileInfo.image_url}`} />
                             </div>
                         </div>
                         <p className="font-semibold text-lg text-green-700 py-2 underline decoration-2 flex justify-center items-center  ">view all</p>
